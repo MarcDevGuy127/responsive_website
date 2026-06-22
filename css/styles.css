@@ -1,0 +1,35 @@
+.container {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 20px 20px;
+
+    grid-template-areas: 
+        "header header"
+        "body sidebar"
+        "footer footer";
+}
+
+#header {
+    grid-area: header;
+}
+
+#body {
+    grid-area: body;
+}
+
+#sidebar {
+    grid-area: sidebar;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+.container div {
+    padding: 40px;
+    color: aliceblue;
+    background-color: brown;
+    border-radius: 4px;
+}
