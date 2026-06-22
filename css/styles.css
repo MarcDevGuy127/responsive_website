@@ -1,4 +1,4 @@
-.container {
+body {
     height: 100%;
     display: grid;
     justify-content: center;
@@ -7,27 +7,27 @@
 
     grid-template-areas: 
         "header header"
-        "body sidebar"
+        "aside body"
         "footer footer";
 }
 
-#header {
+header {
     grid-area: header;
 }
 
-#body {
+body {
     grid-area: body;
 }
 
-#sidebar {
-    grid-area: sidebar;
+aside {
+    grid-area: aside;
 }
 
-#footer {
+footer {
     grid-area: footer;
 }
 
-.container div {
+body main {
     padding: 40px;
     color: aliceblue;
     background-color: brown;
