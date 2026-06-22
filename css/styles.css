@@ -3,7 +3,7 @@ body {
     display: grid;
     justify-content: center;
     text-align: center;
-    grid-gap: 20px 20px;
+    /*grid-gap: 20px 20px;*/
 
     grid-template-areas: 
         "header header"
@@ -11,8 +11,25 @@ body {
         "footer footer";
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+    text-align: left;
+    margin-top: 15px;
+}
+
 header {
     grid-area: header;
+    background-color: darkblue;
+    color: aliceblue;
 }
 
 body {
@@ -21,15 +38,20 @@ body {
 
 aside {
     grid-area: aside;
+    padding: 40px;
+    color: aliceblue;
+    background-color: darkslategray;
 }
 
 footer {
     grid-area: footer;
+    padding: 20px;
+    color: aliceblue;
+    background-color: green;
 }
 
 body main {
     padding: 40px;
     color: aliceblue;
     background-color: brown;
-    border-radius: 4px;
 }
