@@ -39,6 +39,7 @@ li {
 }
 
 header {
+    padding: 50px;
     grid-area: header;
     background-color: darkblue;
     color: aliceblue;
@@ -62,9 +63,39 @@ footer li {
     margin: 20px;
 }
 
+article p {
+    text-align: left;
+}
+
 main {
     padding: 40px;
     color: aliceblue;
     background-color: brown;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* display articles in two columns */
+    gap: 5px;
 }
 
+main h1, main p {
+    grid-column: 1 / -1; /* display heading above columns articles */
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
+    main h1, h2 {
+        text-align: center;
+    }
+    article {
+        text-align: justify;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
