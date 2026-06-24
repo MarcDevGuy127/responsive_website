@@ -1,5 +1,11 @@
+/* variables */
+:root {
+    --header-bg-var: darkblue;
+}
+
 * {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
 }
 
 html, body {
@@ -41,21 +47,18 @@ li {
 header {
     padding: 50px;
     grid-area: header;
-    background-color: darkblue;
-    color: aliceblue;
+    background-color: var(--header-bg-var);
 }
 
 aside {
     grid-area: aside;
     padding: 40px;
-    color: aliceblue;
     background-color: darkslategray;
 }
 
 footer {
     grid-area: footer;
     padding: 20px;
-    color: aliceblue;
     background-color: green;
 }
 
@@ -68,8 +71,7 @@ article p {
 }
 
 main {
-    padding: 40px;
-    color: aliceblue;
+    padding: 50px;
     background-color: brown;
     
     display: grid;
