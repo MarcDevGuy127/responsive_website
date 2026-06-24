@@ -1,11 +1,14 @@
 /* variables */
 :root {
-    --header-bg-var: darkblue;
+    --header-bg-var: rgb(39, 38, 38);
+    --aside-bg-var: rgba(0, 0, 0, 0.763);
+    --main-bg-var: rgba(73, 73, 73, 0.19);
+    --article-bg-var: rgb(240, 248, 255);
+    --footer-bg-var: rgb(39, 38, 38);
 }
 
 * {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: aliceblue;
 }
 
 html, body {
@@ -17,7 +20,6 @@ html, body {
 
 body {
     display: grid;
-    /*justify-content: center;*/
     text-align: center;
     /*grid-gap: 20px 20px;*/
 
@@ -43,6 +45,9 @@ li {
     text-align: left;
     margin-top: 15px;
 }
+header, aside, footer {
+    color: aliceblue;
+}
 
 header {
     padding: 50px;
@@ -53,30 +58,42 @@ header {
 aside {
     grid-area: aside;
     padding: 40px;
-    background-color: darkslategray;
+    background-color: var(--aside-bg-var);
 }
 
 footer {
     grid-area: footer;
     padding: 20px;
-    background-color: green;
+    background-color: var(--footer-bg-var);
 }
 
 footer li {
     margin: 20px;
 }
 
+article {
+    background-color: var(--article-bg-var);
+    box-shadow: rgba(39, 39, 39, 0.089) 0px 0px 20px 5px;
+    margin: 5px;
+    border-radius: 30px;
+}
+
 article p {
-    text-align: left;
+    margin: 20px;
+    text-align: justify;
 }
 
 main {
     padding: 50px;
-    background-color: brown;
+    background-color: var(--main-bg-var);
     
     display: grid;
     grid-template-columns: 1fr 1fr; /* display articles in two columns */
     gap: 5px;
+}
+
+main h1 {
+    font-weight: bolder;
 }
 
 main h1, main p {
